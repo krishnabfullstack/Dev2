@@ -1,0 +1,12 @@
+39.0 APEX_CODE,DEBUG;APEX_PROFILING,NONE;CALLOUT,NONE;DB,NONE;SYSTEM,NONE;VALIDATION,NONE;VISUALFORCE,NONE;WAVE,NONE;WORKFLOW,NONE
+Execute Anonymous: Line_Item__c LT = [SELECT id,name,Book_Order__r.Contact__r.Accountid,Book__r.Id,
+Execute Anonymous:     Book__r.name,Book__r.Family,Quantity__c 
+Execute Anonymous:     FROM Line_Item__c LIMIT 1];
+Execute Anonymous:     
+Execute Anonymous:     SYSTEM.DEBUG(LT.Book_Order__r.Contact__r.Accountid);
+09:51:37.5 (5403042)|USER_INFO|[EXTERNAL]|005410000028GkS|candidate@829258advdev.com.devbox|Pacific Standard Time|GMT-08:00
+09:51:37.5 (5417468)|EXECUTION_STARTED
+09:51:37.5 (5423269)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+09:51:37.5 (30372447)|USER_DEBUG|[5]|DEBUG|0011100001L8285AAB
+09:51:37.5 (30430546)|CODE_UNIT_FINISHED|execute_anonymous_apex
+09:51:37.5 (32136900)|EXECUTION_FINISHED

@@ -1,0 +1,24 @@
+39.0 APEX_CODE,DEBUG;APEX_PROFILING,NONE;CALLOUT,NONE;DB,NONE;SYSTEM,NONE;VALIDATION,NONE;VISUALFORCE,NONE;WAVE,NONE;WORKFLOW,NONE
+11:19:44.0 (531645)|USER_INFO|[EXTERNAL]|005410000028GkS|candidate@829258advdev.com.devbox|Pacific Standard Time|GMT-08:00
+11:19:44.0 (564039)|EXECUTION_STARTED
+11:19:44.0 (568284)|CODE_UNIT_STARTED|[EXTERNAL]|TRIGGERS
+11:19:44.0 (598583)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DZCcZ]
+11:19:44.0 (32749320)|USER_DEBUG|[52]|DEBUG|{01t11000006KTm0AAG=12, 01t41000001bXVSAA2=1}
+11:19:44.0 (38629947)|USER_DEBUG|[57]|DEBUG|Fantasy Series 2 Book 2 Paperback ; 01t11000006KTm0AAG
+11:19:44.0 (38695222)|USER_DEBUG|[64]|DEBUG|mapCollecBookNames== {Fantasy Series 2 Book 2 Paperback=12}
+11:19:44.0 (38746018)|USER_DEBUG|[57]|DEBUG|Harry Potter Book 1 Hardcover ; 01t41000001bXVSAA2
+11:19:44.0 (38778729)|USER_DEBUG|[60]|DEBUG|mapBOrdPrdNames == {01t11000006KTm0AAG={}, a001100000DZCcZAAX={Fantasy Series 2 Book 1 Paperback=12}}
+11:19:44.0 (38809770)|USER_DEBUG|[64]|DEBUG|mapCollecBookNames== {Harry Potter Book 1 Hardcover=1}
+11:19:44.0 (38854680)|USER_DEBUG|[57]|DEBUG|Harry Potter Book 2 Hardcover ; 01t41000001bXVSAA2
+11:19:44.0 (38891589)|USER_DEBUG|[64]|DEBUG|mapCollecBookNames== {Harry Potter Book 1 Hardcover=1, Harry Potter Book 2 Hardcover=1}
+11:19:44.0 (38991933)|USER_DEBUG|[69]|DEBUG|mapBOrdPrdNames each == {Fantasy Series 2 Book 1 Paperback=12}
+11:19:44.0 (39027094)|USER_DEBUG|[69]|DEBUG|mapBOrdPrdNames each == {Harry Potter Book 1 Hardcover=1, Harry Potter Book 2 Hardcover=1}
+11:19:44.0 (39056810)|USER_DEBUG|[69]|DEBUG|mapBOrdPrdNames each == {Harry Potter Book 1 Hardcover=1, Harry Potter Book 2 Hardcover=1}
+11:19:44.0 (39079173)|USER_DEBUG|[106]|DEBUG|List of Book Names{01t11000006KTm0AAG={Harry Potter Book 1 Hardcover=1, Harry Potter Book 2 Hardcover=1}, 01t41000001bXVSAA2=(already output), a001100000DZCcZAAX={Fantasy Series 2 Book 1 Paperback=12}}
+11:19:44.0 (58027858)|USER_DEBUG|[124]|DEBUG|List of Wharehouse accounts(Account:{Id=0011100001L82JVAAZ, Name=Atlanta Wharehouse}, Account:{Id=0011100001L8T5bAAF, Name=Charlotte Warehouse})
+11:19:44.0 (58923835)|USER_DEBUG|[188]|DEBUG|Final update to Product{01t11000006HfoGAAS=Product2:{Account__c=0011100001L82JVAAZ, Id=01t11000006HfoGAAS, Name=Fantasy Series 2 Book 2 Paperback, Inventory__c=0}}
+11:19:44.0 (76627859)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+11:19:44.0 (88206533)|CODE_UNIT_FINISHED|Workflow:Product2
+11:19:44.0 (90226963)|CODE_UNIT_FINISHED|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DZCcZ]
+11:19:44.0 (113189603)|CODE_UNIT_FINISHED|TRIGGERS
+11:19:44.0 (113198788)|EXECUTION_FINISHED

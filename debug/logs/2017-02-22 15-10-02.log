@@ -1,0 +1,13 @@
+39.0 APEX_CODE,DEBUG;APEX_PROFILING,NONE;CALLOUT,NONE;DB,NONE;SYSTEM,NONE;VALIDATION,NONE;VISUALFORCE,NONE;WAVE,NONE;WORKFLOW,NONE
+12:10:01.0 (397466)|USER_INFO|[EXTERNAL]|005410000028GkS|candidate@829258advdev.com.devbox|Pacific Standard Time|GMT-08:00
+12:10:01.0 (423130)|EXECUTION_STARTED
+12:10:01.0 (426779)|CODE_UNIT_STARTED|[EXTERNAL]|TRIGGERS
+12:10:01.0 (458290)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DZCcZ]
+12:10:01.0 (14944030)|EXCEPTION_THROWN|[36]|System.AssertException: Assertion Failed: Same value: null
+12:10:01.0 (15245766)|FATAL_ERROR|System.AssertException: Assertion Failed: Same value: null
+
+Trigger.RefactorTriiger: line 36, column 1
+12:10:01.0 (15257702)|FATAL_ERROR|System.AssertException: Assertion Failed: Same value: null
+
+Trigger.RefactorTriiger: line 36, column 1
+12:10:01.0 (16850402)|CODE_UNIT_FINISHED|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DZCcZ]

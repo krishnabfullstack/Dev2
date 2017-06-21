@@ -1,0 +1,16 @@
+39.0 APEX_CODE,DEBUG;APEX_PROFILING,NONE;CALLOUT,NONE;DB,NONE;SYSTEM,NONE;VALIDATION,NONE;VISUALFORCE,NONE;WAVE,NONE;WORKFLOW,NONE
+12:12:12.0 (434152)|USER_INFO|[EXTERNAL]|005410000028GkS|candidate@829258advdev.com.devbox|Pacific Standard Time|GMT-08:00
+12:12:12.0 (461607)|EXECUTION_STARTED
+12:12:12.0 (466290)|CODE_UNIT_STARTED|[EXTERNAL]|TRIGGERS
+12:12:12.0 (501886)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DZCcZ]
+12:12:12.0 (17361987)|USER_DEBUG|[52]|DEBUG|{01t11000006HfnXAAS=1, 01t11000006KTm0AAG=12, 01t41000001bXVSAA2=1}
+12:12:12.0 (23728268)|USER_DEBUG|[110]|DEBUG|List of Book Names{a001100000DZCcZAAX={Fantasy Series 2 Book 1 Paperback=12, Fantasy Series 2 Book 2 Paperback=12, Harry Potter Book 1 Hardcover=1, Harry Potter Book 2 Hardcover=1}}
+12:12:12.0 (38185157)|USER_DEBUG|[128]|DEBUG|List of Wharehouse accounts(Account:{Id=0011100001L82JVAAZ, Name=Atlanta Wharehouse}, Account:{Id=0011100001L8T5bAAF, Name=Charlotte Warehouse})
+12:12:12.0 (38528725)|EXCEPTION_THROWN|[135]|System.AssertException: Assertion Failed: Expected: Account:{Id=0011100001L82JVAAZ, Name=Atlanta Wharehouse}, Actual: null
+12:12:12.0 (38674534)|FATAL_ERROR|System.AssertException: Assertion Failed: Expected: Account:{Id=0011100001L82JVAAZ, Name=Atlanta Wharehouse}, Actual: null
+
+Trigger.RefactorTriiger: line 135, column 1
+12:12:12.0 (38684022)|FATAL_ERROR|System.AssertException: Assertion Failed: Expected: Account:{Id=0011100001L82JVAAZ, Name=Atlanta Wharehouse}, Actual: null
+
+Trigger.RefactorTriiger: line 135, column 1
+12:12:12.0 (40061238)|CODE_UNIT_FINISHED|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DZCcZ]

@@ -1,0 +1,17 @@
+39.0 APEX_CODE,DEBUG;APEX_PROFILING,NONE;CALLOUT,NONE;DB,NONE;SYSTEM,NONE;VALIDATION,NONE;VISUALFORCE,NONE;WAVE,NONE;WORKFLOW,NONE
+11:39:16.0 (480393)|USER_INFO|[EXTERNAL]|005410000028GkS|candidate@829258advdev.com.devbox|Pacific Standard Time|GMT-08:00
+11:39:16.0 (510626)|EXECUTION_STARTED
+11:39:16.0 (515320)|CODE_UNIT_STARTED|[EXTERNAL]|TRIGGERS
+11:39:16.0 (547494)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DZCcZ]
+11:39:16.0 (25455884)|USER_DEBUG|[51]|DEBUG|{01t11000006KTm0AAG=12, 01t41000001bXVSAA2=1}
+11:39:16.0 (47102874)|USER_DEBUG|[62]|DEBUG|mapCollecBookNames== {Fantasy Series 2 Book 2 Paperback=12}
+11:39:16.0 (47178722)|USER_DEBUG|[62]|DEBUG|mapCollecBookNames== {Fantasy Series 2 Book 2 Paperback=12, Harry Potter Book 1 Hardcover=1}
+11:39:16.0 (47240617)|USER_DEBUG|[62]|DEBUG|mapCollecBookNames== {Fantasy Series 2 Book 2 Paperback=12, Harry Potter Book 1 Hardcover=1, Harry Potter Book 2 Hardcover=1}
+11:39:16.0 (47357530)|USER_DEBUG|[67]|DEBUG|mapCollecBkNames each == 01t11000006KTm0AAG ; {Fantasy Series 2 Book 2 Paperback=12, Harry Potter Book 1 Hardcover=1, Harry Potter Book 2 Hardcover=1}
+11:39:16.0 (47394081)|USER_DEBUG|[67]|DEBUG|mapCollecBkNames each == 01t41000001bXVSAA2 ; {Fantasy Series 2 Book 2 Paperback=12, Harry Potter Book 1 Hardcover=1, Harry Potter Book 2 Hardcover=1}
+11:39:16.0 (47419141)|USER_DEBUG|[104]|DEBUG|List of Book Names{a001100000DZCcZAAX={Fantasy Series 2 Book 1 Paperback=12, Fantasy Series 2 Book 2 Paperback=10}}
+11:39:16.0 (57217579)|USER_DEBUG|[122]|DEBUG|List of Wharehouse accounts(Account:{Id=0011100001L82JVAAZ, Name=Atlanta Wharehouse}, Account:{Id=0011100001L8T5bAAF, Name=Charlotte Warehouse})
+11:39:16.0 (58078650)|USER_DEBUG|[186]|DEBUG|Final update to Product{}
+11:39:16.0 (59758369)|CODE_UNIT_FINISHED|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DZCcZ]
+11:39:16.0 (89675678)|CODE_UNIT_FINISHED|TRIGGERS
+11:39:16.0 (89683802)|EXECUTION_FINISHED

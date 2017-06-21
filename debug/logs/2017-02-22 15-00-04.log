@@ -1,0 +1,13 @@
+38.0 APEX_CODE,DEBUG;APEX_PROFILING,NONE;CALLOUT,NONE;DB,NONE;SYSTEM,NONE;VALIDATION,NONE;VISUALFORCE,NONE;WAVE,NONE;WORKFLOW,NONE
+12:00:02.0 (69056)|USER_INFO|[EXTERNAL]|005410000028GkS|candidate@829258advdev.com.devbox|Pacific Standard Time|GMT-08:00
+12:00:02.0 (101654)|EXECUTION_STARTED
+12:00:02.0 (106146)|CODE_UNIT_STARTED|[EXTERNAL]|06611000000DnQZ|VF: /apex/BookOrderPage
+12:00:02.0 (143480224)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DZCcZ]
+12:00:02.0 (174927977)|USER_DEBUG|[52]|DEBUG|{}
+12:00:02.0 (175356151)|FATAL_ERROR|System.NullPointerException: Argument 1 cannot be null
+
+Trigger.RefactorTriiger: line 59, column 1
+12:00:02.0 (175372233)|FATAL_ERROR|System.NullPointerException: Argument 1 cannot be null
+
+Trigger.RefactorTriiger: line 59, column 1
+12:00:02.0 (177418648)|CODE_UNIT_FINISHED|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DZCcZ]

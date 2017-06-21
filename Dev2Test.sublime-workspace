@@ -1,0 +1,422 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/classes/BookOrderPageControllerTest.cls",
+			"settings":
+			{
+				"buffer_size": 8569,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/classes/TestDataHelper.cls",
+			"settings":
+			{
+				"buffer_size": 6917,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/triggers/BookOrder.trigger",
+			"settings":
+			{
+				"buffer_size": 9015,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "trigger RefactorTriiger on Book_Order__c (before Update) {\n \n if(Trigger.isUpdate){ \n\n\n    Map<Id,Product2> mapUpdatePrd = new Map<Id,Product2>();\n    Map<id,id> BooksellerID = new Map<id,id>();\n    id rtId2 = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Book Seller').getRecordTypeId();  \n    id rtWhareId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Warehouse').getRecordTypeId();   \n    Set<String> BookNames = new Set<String>();\n    Map<id,Line_Item__c> mapLineItems = NEW Map<id,Line_Item__c>();\n    Map<id,Map<String,Decimal>> mapBOrdPrdNames = new Map<id,Map<String,Decimal>>();\n    List<Product2> CollectionBooks = new List<Product2>(); \n    Map<id,Book_Order__c> lstBookOrder = new Map<id,Book_Order__c>();\n    Map<id,List<Product2>> mapLTBookList = new Map<id,List<Product2>>(); \n\n    //---\n    Map<id,Product2> refGetBookDetails = new Map<id,Product2>();\n    Map<id,Decimal> retGetCollectionDetails = new Map<id,Decimal>();\n    Map<id,id> mapGetBKID = new  Map<id,id> ();\n     \n/*************************************** describe each varaibales as well****************************************************/\n  for (Book_Order__c eachBook: Trigger.new){\n      lstBookOrder.put(eachBook.id,eachBook); \n  } \n\n       //getting book names and quantity ordered by cutomer                                                     \n        Map<String,Decimal> mapBookNames = new Map<String,Decimal>();\n  // looping through book order to capture Line Item details (book names and quantities)\n  for (Line_Item__c eachLT: [SELECT id,name,Book_Order__c,Book_Order__r.Contact__r.Accountid,Book__r.Id,Book__r.name,Book__r.Family,Quantity__c \n\t\t\t\t\t\t\t    FROM Line_Item__c\n\t\t\t\t\t\t\t    WHERE Book_Order__c in: Trigger.New]){ \n      if(lstBookOrder.get(eachLT.Book_Order__c).Order_Status__c == 'Ordered'){  // System.debug('Check1');\n        //Get bookseller ID (Book order --> Contact --> AccountID)\n        BooksellerID.put(eachLT.Book_Order__c,eachLT.Book_Order__r.Contact__r.Accountid);\n            if(eachLT.Book__r.Family <> 'Collection'){ \n              mapLineItems.PUT(eachLT.Book_Order__c,eachLT);\n              mapBookNames.Put(eachLT.Book__r.name, eachLT.Quantity__c);\n              BookNames.add(eachLT.Book__r.name);   \n            }\n            if(eachLT.Book__r.Family == 'Collection'){\n             CollectionBooks.add(new Product2(id=eachLT.Book__r.Id)); \n             retGetCollectionDetails.put(eachLT.Book__r.Id,eachLT.Quantity__c);\n           //  mapGetBKID.put(eachLT.Book__r.Id,eachLT.Book_Order__c);\n            }\n        mapBOrdPrdNames.put(eachLT.Book_Order__c,mapBookNames); \n      }\n  }\n\n /*******************************************************************************************/\n  //Collect collection related books\n  system.debug(retGetCollectionDetails);\n    \n    Map<id,Product2> mapCollectionBooks = new Map<id,Product2>(); \n\tMap<String,Decimal> mapCollecBookNames = new Map<String,Decimal>();\n\n\tif(!CollectionBooks.isEmpty()){\n\t     mapCollectionBooks = new Map<id,Product2>([SELECT id,name,Collection__c,Family,Inventory__c\n\t\t\t\t\t\t\t\t\tFROM Product2 \n\t\t\t\t\t\t\t\t   WHERE Family <> 'Inventory' AND Collection__c in: CollectionBooks order by Collection__c]);\n\t\t\n\t\tfor (Book_Order__c eachBook: lstBookOrder.Values()){\n\t  \t  //before we add any new books Copy existing books to collections \n\t  \t  if(mapBOrdPrdNames.get(eachBook.id) != Null){\n\t  \t  \tmapCollecBookNames.PUTALL(mapBOrdPrdNames.get(eachBook.id));\n\t\t\tfor(Product2 eachPrd: mapCollectionBooks.values() ){\n\t\t\t\tif(retGetCollectionDetails.get(eachPrd.Collection__c)!= Null){\n\t\t\t\t\tBookNames.add(eachPrd.Name); \n\t\t\t\t\tmapCollecBookNames.put(eachPrd.Name,retGetCollectionDetails.get(eachPrd.Collection__c));\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t\n\t\t\t} mapBOrdPrdNames.Put(eachBook.Id,mapCollecBookNames); \n\t  \t  }\n\t \t}\n\t}\n\n  system.debug('List of Book Names' +mapBOrdPrdNames); \n /*******************************************************************************************/\n/*\nNotes:\nin below logic it checks for these senarios\n1) Select the whare house which has all Line Items \n2) Check inventory \n*/\n  //get books realted to WhareHouse\n  //**IMP--> Implement offset fi each whare house is having more than 50,000 records\n  \n \n\n\n  List<Account> lstAcctRecs = new List<Account>();\n  if(!BookNames.isEmpty()){ \n    // retrives 24 accounts and related Inventory Books records\n Map<id,Product2> mapBooks = new Map<id,Product2> ([SELECT id,name,Inventory__c,Account__r.name \n                                FROM product2 \n                              WHERE Family = 'Inventory' and Name in: BookNames Order by Account__r.name  Desc]);\n \n\n    lstAcctRecs = [SELECT id,name, \n                          (SELECT id,name,Inventory__c FROM products__r WHERE Family = 'Inventory' and Name in: BookNames Limit 50000) \n                    FROM Account \n                   WHERE RecordTypeId =: rtWhareId order by Name Asc]; \n  }\n  \n   system.debug('List of Wharehouse accounts' +lstAcctRecs); \n\n  //check if Account Wharehouse Inventory has books available and has sufficent in inventory, this will update \n    Map<id,Boolean> mapWharehouseHasSellerBooks = new Map<id,Boolean>();\n   for (Book_Order__c eachBO: Trigger.new){ // system.debug('Entered Whare house check ****');\n    if(lstBookOrder.get(eachBO.id).Order_Status__c == 'Ordered'){  \n      //itterate each account, to check Line item has sufficient books in inventory to order\n      for (Account eachAcct : lstAcctRecs){ //System.debug('Inventory WhareHouse Name'+eachAcct.Name);\n          Map<String,id> WharehouseBookNames = new Map<String,id>(); //added on feb 17\n          Map<id,Product2> WharehouseBooksDetails = new Map<id,Product2>(); //added on feb 17\n          //store book in MAP for later use\n          for (Product2 eachPrd : eachAcct.products__r){//System.debug('Invenlog 2 Book Name'+eachPrd.Name);\n              WharehouseBookNames.put(eachPrd.Name,eachPrd.Id);\n              WharehouseBooksDetails.put(eachPrd.Id,eachPrd);                                            \n          }\n          //checking if inventory has books\n          for (String eachOrderedBooks: BookNames ){ //system.debug('Inventory search for Books '+eachOrderedBooks);\n              //if inventory doesn't have the lineItem book, then revert back the order\n              if(WharehouseBookNames.get(eachOrderedBooks) == Null){\n                mapWharehouseHasSellerBooks.put(BooksellerID.get(eachBO.id),False); \n                eachBO.Order_Status__c = 'Backordered'; \n                Break;             \n              }\n\n              //Since Wharehouse has books reduce the invetory count in wharehouse based on number of books ordered\n              Product2 prdDetails = WharehouseBooksDetails.get(WharehouseBookNames.get(eachOrderedBooks));\n              if(mapBOrdPrdNames.get(eachBO.id) != Null ){\n                if(mapBOrdPrdNames.get(eachBO.id).get(eachOrderedBooks) != Null){ //system.debug('Inventory search for Books Quantity Before '+prdDetails.Inventory__c);\n                  prdDetails.Inventory__c = prdDetails.Inventory__c - mapBOrdPrdNames.get(eachBO.id).Get(eachOrderedBooks);\n                  //system.debug('Inventory search for Books Quantity After '+prdDetails.Inventory__c);\n                } \n              } \n              //add to map to update inventory Books\n              mapUpdatePrd.put(PrdDetails.id,PrdDetails);\n\n              //if inventory goes below 1, than Order must be Orderedback\n              if(PrdDetails.Inventory__c < 0){ //system.debug('inventory is less than 0 '+PrdDetails.Inventory__c);               \n                mapUpdatePrd.remove(PrdDetails.id); \n                Break;\n              }\n\n              //Since the Books are available in inventory with sufficient quantity to order set the map \"mapWharehouseHasSellerBooks\" to True\n              mapWharehouseHasSellerBooks.put(BooksellerID.get(eachBO.id),True); \n          }\n         // System.debug(eachAcct.Name);\n          // system.debug('Inventory search Sucess '+mapWharehouseHasSellerBooks.get(BooksellerID.get(eachBO.id)));                                    \n          if(mapWharehouseHasSellerBooks.get(BooksellerID.get(eachBO.id)) != Null){  \n            Boolean existInWharehouse = mapWharehouseHasSellerBooks.get(BooksellerID.get(eachBO.id)); \n            if(existInWharehouse == True){\n              eachBO.Order_Status__c = 'Shipped'; //system.debug('Log***'+eachBO.Order_Status__c);\n             Break;\n            } \n            else {\n            eachBO.Order_Status__c = 'Backordered'; \n            }\n          }           \n      } //system.debug('Book Seller Result 2'+mapWharehouseHasSellerBooks.get(BooksellerID.get(eachBO.id)));\n      //If Product to be update is empty set order status to Backordered\n      if(mapUpdatePrd.isEmpty()){  \n        eachBO.Order_Status__c = 'Backordered';     \n      }\n    } \n  }\n\n  system.debug('Final update to Product' +mapUpdatePrd);\n  if(!mapUpdatePrd.isEmpty()){\n    Update mapUpdatePrd.values();\n  }\n\n}\n\n}",
+			"file": "src/triggers/RefactorTriiger.trigger",
+			"file_size": 8919,
+			"file_write_time": 131322708450000000,
+			"settings":
+			{
+				"buffer_size": 8984,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/classes/BookOrderPageController.cls",
+			"settings":
+			{
+				"buffer_size": 5744,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<apex:page StandardController=\"Book_Order__c\" extensions=\"BookOrderPageController\">\n\n    <apex:form >\n    <apex:outputPanel id=\"pageMessage\">\n    <apex:pageMessages escape=\"false\" id=\"showErrMsg\"/>\n    </apex:outputPanel>\n    <apex:outputPanel >\n    <apex:pageBlock > \n    <apex:pageMessage summary=\"Unable to determine Customer or Bookseller information. Please create an order from the Book Orders related list for the Customer\" severity=\"error\" strength=\"2\" rendered=\"{!if(Book_Order__c.Order_Status__c = 'Shipped', True,False)}\" id=\"Message1\"/>\n      \n    <apex:pageBlockButtons >\n        <apex:commandButton action=\"{!ShipOrder}\" id=\"saveButton1\" value=\"Ship Order\" reRender=\"Table2,ThisOrderId,LineItemsId\" rendered=\"{!if(Book_Order__c.Order_Status__c = 'Shipped', False,True)}\"/>\n        <apex:commandButton action=\"{!Cancel}\" id=\"CancelButton\" value=\"Cancel\" reRender=\"Table2,ThisOrderId,LineItemsId\"  />\n         <apex:commandButton action=\"{!Save}\" id=\"SaveButton\" value=\"Save for Later\" reRender=\"Table2,ThisOrderId,LineItemsId\"  /> \n    </apex:pageBlockButtons>\n <!-- ====================================Book Order Details=================================================================== --> \n\n\n    <apex:pageBlockSection columns=\"3\" collapsible=\"False\" Title=\"Select Valuation From Below Table\" >\n      <apex:pageBlockSectionItem >Name           \n        <apex:outputField value=\"{!Book_Order__c.Contact__c}\" id=\"ContactId\"/> \n      </apex:pageBlockSectionItem>\n               \n      <apex:pageBlockSectionItem >Shipping Address\n        <apex:outputText > {!Book_Order__c.Contact__r.MailingStreet} <br/> {!Book_Order__c.Contact__r.MailingCity} , {!Book_Order__c.Contact__r.MailingState}\n                          {!Book_Order__c.Contact__r.MailingPostalCode} <br/> {!Book_Order__c.Contact__r.MailingCountry}\n        </apex:outputText>\n\n\n      </apex:pageBlockSectionItem> \n       \n      <apex:pageBlockSectionItem >Order Status          \n        <apex:outputField value=\"{!Book_Order__c.Order_Status__c}\" id=\"OrderStatusId\"/> \n      </apex:pageBlockSectionItem> \n\n      <apex:pageBlockSectionItem >Maps        \n                       <!-- Display the address on a map -->\n        <apex:map width=\"100px\" height=\"100px\" mapType=\"roadmap\" zoomLevel=\"17\"\n        center=\"{!Book_Order__c.Contact__r.MailingStreet},{!Book_Order__c.Contact__r.MailingCity},{!Book_Order__c.Contact__r.MailingState}\">\n       </apex:map>\n      </apex:pageBlockSectionItem> \n      \n      <br/>    \n      \n      <apex:pageBlockSectionItem >Total Cost\n        <apex:outputField value=\"{!Book_Order__c.Total_Cost__c}\" id=\"TotalCostId\"/>  \n      </apex:pageBlockSectionItem> \n\n\n    </apex:pageBlockSection>    \n\n\n \n\n      </apex:pageBlock>                  \n    </apex:outputPanel>\n  </apex:form>\n\n<!-- ===============================================Books List, tab Orders======================================================--> \n    <apex:form >\n    <apex:outputPanel id=\"mainBody1\"  rendered=\"{!if(Book_Order__c.Order_Status__c <> 'Shipped', True,False)}\">\n      <apex:tabPanel >\n      \n        <apex:tab label=\"Orders\" rendered=\"True\"  id=\"OrdersId\"> \n          <apex:outputPanel id=\"BooksListOutPutPanelId\">\n\n            <apex:pageBlock title=\"{!$ObjectType.Product2.LabelPlural} in this Order\" id=\"AvailableBooks\">\n<apex:pageMessage summary=\"Unable to determine Customer or Bookseller information. Please create an order from the Book Orders related list for the Customer\" severity=\"error\" strength=\"2\" rendered=\"{!if(ISNULL(AvailableBookList), True,False)}\" id=\"Message1\"/>\n             <apex:pageMessages />\n\n<apex:pageMessage summary=\"Unable to determine Customer or Bookseller information. Please create an order from the Book Orders related list for the Customer\" severity=\"info\" strength=\"2\" rendered=\"{!if(NOT(ISNULL(AvailableBookList)), True,False)}\" id=\"Message2\"/>\n             <apex:pageMessages />\n\n <!-- =================Search Books Functionnality  ===============================================-->       \n            <apex:outputLabel value=\"Type part of the Book name:\" />\n            <apex:inputText title=\"test\" id=\"SearchId\" value=\"{!Userinput}\"/> \n            <apex:commandButton value=\"Search\"  reRender=\"BooksListOutPutPanelId\"/>     \n \n <!-- =================End of Search Functionnality =============================================== --> \n\n<!-- ==================Display Books(Products) related to selected Bookseller(Account) =============================================== -->            \n            <apex:pageBlockTable value=\"{!AvailableBookList}\" var=\"BookRec\" id=\"Table1\" rendered=\"{!if(NOT(ISNULL(AvailableBookList)), True,False)}\">          \n                <apex:column style=\"width:100px\"> \n                  <apex:commandButton action=\"{!addToShoppingCart}\" value=\"Add to Order\" immediate=\"true\" reRender=\"BooksListOutPutPanelId, LineItemsOutPanelId\" >\n                    <apex:param value=\"{!BookRec.id}\" assignTo=\"{!selectedBookID}\" name=\"selectedBookID\"/> \n                  </apex:commandButton>\n                  </apex:column>            \n                  <apex:column value=\"{!BookRec.Name}\" />    \n                  <apex:column value=\"{!BookRec.Current_Price__c}\" />   \n            </apex:pageBlockTable>\n\n<!-- ==================Display Record Count===============================================-->            \n            <br/>\n <apex:outputText label=\"Record Count\" id=\"RecordCountId\" style=\"font-style:italic;background: #cecece;font-weight: bold;\" value=\"Total Records : {!AvailableBookList.Size}\" />\n   \n            </apex:pageBlock> \n          </apex:outputPanel>\n        </apex:tab>\n\n<!-- ==================Selected Orders Display Tab (This Order)=============================================== --> \n\n        <apex:tab label=\"This Order\" rendered=\"True\" id=\"ThisOrderId\">\n          <apex:outputPanel id=\"LineItemsOutPanelId\" >\n            <apex:pageBlock title=\"Selected Book Order {!$ObjectType.Line_Item__c.LabelPlural}\" id=\"AvailableLineItems\" mode=\"inlineEdit\">\n            <apex:pageMessage summary=\"There are no books in this order yet. Please select the Books tab to browse the books available to order\" severity=\"info\" strength=\"2\" rendered=\"{!if(AvailableBookList == Null, True,False)}\" id=\"Message1\"/>\n              <apex:pageBlockButtons >\n\n                <apex:commandButton action=\"{!updateFromShoppingCart}\" id=\"saveButton\" value=\"Save\" reRender=\"BooksListOutPutPanelId,LineItemsOutPanelId\">\n                   <apex:actionSupport event=\"OnClick\"   reRender=\" Table2\"/>\n                </apex:commandButton>\n              </apex:pageBlockButtons>\n\n              <apex:variable value=\"{!0.00}\" var=\"total\"/>\n<!-- ==================Book Order Line Items to be displayed=============================================== --> \n                <apex:pageBlockTable value=\"{!AvailableLineItemList}\" var=\"LineItem\" id=\"Table2\" rendered=\"{!IF(NOT(ISNULL(AvailableLineItemList)),True,False)}\">     \n                <apex:column style=\"width:100px\"> \n                  <!-- ///////Remove Button on page////-->\n                  <apex:commandButton action=\"{!removeFromShoppingCart}\" value=\"Remove\"  reRender=\"BooksListOutPutPanelId, LineItemsOutPanelId\" immediate=\"true\">\n                    <apex:param value=\"{!LineItem.id}\" assignTo=\"{!selectedLineItemID}\" name=\"selectedLineItemID\"/> \n                  </apex:commandButton>\n                </apex:column>\n                  \n                <apex:column >\n                <apex:outputField value=\"{!LineItem.Name}\" id=\"LineItemNameId\"/>    \n                <apex:facet name=\"header\">Name</apex:facet>\n                </apex:column>\n\n                <apex:column >\n                <apex:outputField value=\"{!LineItem.Book_Order__c}\" id=\"LineItemBookOrderId\"/> \n                <apex:facet name=\"header\">Book Order</apex:facet>\n                </apex:column>\n                  \n                <apex:column >\n                <apex:outputField value=\"{!LineItem.Price_Each__c}\" id=\"LineItemPriceEachId\"/>\n                <apex:facet name=\"header\">Price Each</apex:facet>\n                </apex:column>\n\n                <apex:column >\n                <apex:outputField value=\"{!LineItem.Extended_Price__c}\" id=\"LineItemExtendedPriceId\"/>\n                <apex:facet name=\"header\">Extended Price</apex:facet>\n                <apex:facet name=\"footer\">Total: {!TotalCount}</apex:facet>\n                <apex:variable var=\"total\" value=\"{!total + LineItem.Extended_Price__c}\" />\n                \n                </apex:column>   \n\n                <apex:column >   <apex:facet name=\"header\">Quantity</apex:facet>  \n                <apex:inputText value=\"{!LineItem.Quantity__c}\" id=\"LineItemQuantityId\">\n                  \n                 \n                </apex:inputText>\n                </apex:column>\n\n            </apex:pageBlockTable>\n              <br/>\n  <apex:outputText label=\"Record Count\" style=\"font-style:italic;background: #cecece;font-weight: bold;\" value=\"Total Records : {!AvailableLineItemList.Size}\" />\n   \n            </apex:pageBlock> \n          </apex:outputPanel>\n\n      </apex:tab>\n\n</apex:tabPanel>\n      \n    </apex:outputPanel>\n    </apex:form>  \n</apex:page>",
+			"file": "src/pages/BookOrderPage.page",
+			"file_size": 9182,
+			"file_write_time": 131322591800000000,
+			"settings":
+			{
+				"buffer_size": 9183,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 494.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/krishnabogavelli/Documents/Dev2Test",
+		"/Users/krishnabogavelli/Documents/Dev2Test/config",
+		"/Users/krishnabogavelli/Documents/Dev2Test/src",
+		"/Users/krishnabogavelli/Documents/Dev2Test/src/classes",
+		"/Users/krishnabogavelli/Documents/Dev2Test/src/pages",
+		"/Users/krishnabogavelli/Documents/Dev2Test/src/triggers"
+	],
+	"file_history":
+	[
+		"/Users/krishnabogavelli/Documents/Dev2Test/src/classes/BookListControllerTest.cls",
+		"/Users/krishnabogavelli/Documents/Dev2Test/src/pages/BookOrderPage.page-meta.xml",
+		"/Users/krishnabogavelli/Documents/Dev2Test/src/pages/BookOrderPage.page"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/classes/BookOrderPageControllerTest.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8569,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8122,
+								8122
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/classes/TestDataHelper.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6917,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								715,
+								729
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/triggers/BookOrder.trigger",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9015,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5765,
+								5765
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 168.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/triggers/RefactorTriiger.trigger",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								8984
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 187.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/classes/BookOrderPageController.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5724,
+								5737
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1725.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/pages/BookOrderPage.page",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8609,
+								8609
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Visualforce.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1680.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MavensMate-OutputPanel":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Dev2Test.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 283.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

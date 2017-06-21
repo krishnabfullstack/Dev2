@@ -1,0 +1,86 @@
+39.0 APEX_CODE,DEBUG;APEX_PROFILING,NONE;CALLOUT,NONE;DB,NONE;SYSTEM,NONE;VALIDATION,NONE;VISUALFORCE,NONE;WAVE,NONE;WORKFLOW,NONE
+05:45:07.0 (870337)|USER_INFO|[EXTERNAL]|005410000028GkS|candidate@829258advdev.com.devbox|Pacific Standard Time|GMT-08:00
+05:45:07.0 (910244)|EXECUTION_STARTED
+05:45:07.0 (914585)|CODE_UNIT_STARTED|[EXTERNAL]|01p11000000Fz9e|BookListControllerTest.TestMethodOne
+05:45:11.836 (4836038089)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+05:45:11.836 (5195329596)|CODE_UNIT_FINISHED|Workflow:Product2
+05:45:11.836 (5377604012)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+05:45:11.836 (5530202518)|CODE_UNIT_FINISHED|Workflow:Product2
+05:45:12.859 (5859692265)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+05:45:12.859 (6138438964)|CODE_UNIT_FINISHED|Workflow:Product2
+05:45:12.859 (6469295185)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+05:45:12.859 (6731478489)|CODE_UNIT_FINISHED|Workflow:Product2
+05:45:14.86 (7086268664)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+05:45:14.86 (7349075604)|CODE_UNIT_FINISHED|Workflow:Product2
+05:45:14.86 (7744146087)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Contact
+05:45:14.86 (7781946245)|CODE_UNIT_FINISHED|Workflow:Contact
+05:45:14.86 (7847707339)|USER_DEBUG|[91]|DEBUG|Test dataBook_Order__c:{Id=a001100000DompXAAR, Name=order_2, Contact__c=0031100001G0HqbAAF}
+05:45:14.86 (7847992982)|USER_DEBUG|[98]|DEBUG|Anydatatype_msg1Family1**Inventory Book Seller
+05:45:14.86 (7848543808)|USER_DEBUG|[98]|DEBUG|Anydatatype_msg1Family1**Inventory Book Seller
+05:45:14.86 (7848822029)|USER_DEBUG|[98]|DEBUG|Anydatatype_msg1Family1**Inventory Book Seller
+05:45:14.86 (7849008490)|USER_DEBUG|[98]|DEBUG|Anydatatype_msg1Family1**Inventory Book Seller
+05:45:14.86 (7849242455)|USER_DEBUG|[98]|DEBUG|Anydatatype_msg1Family1**Inventory Book Seller
+05:45:14.86 (7849468257)|USER_DEBUG|[98]|DEBUG|Anydatatype_msg1Family1**Inventory Book Seller
+05:45:14.86 (7849647926)|USER_DEBUG|[98]|DEBUG|Anydatatype_msg1Family1**Inventory Book Seller
+05:45:14.86 (7849822184)|USER_DEBUG|[98]|DEBUG|Anydatatype_msg1Family1**Inventory Book Seller
+05:45:14.86 (7850001359)|USER_DEBUG|[98]|DEBUG|Anydatatype_msg1Family1**Inventory Book Seller
+05:45:14.86 (7850181749)|USER_DEBUG|[98]|DEBUG|Anydatatype_msg1Family1**Inventory Book Seller
+05:45:14.86 (7916858640)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|BookOrderTrigger on Book_Order trigger event BeforeUpdate for [a001100000DompX]
+05:45:14.86 (7917490500)|USER_DEBUG|[19]|DEBUG|eachBO***Book_Order__c:{Id=a001100000DompXAAR, IsDeleted=false, Name=order_2, CreatedDate=2017-02-23 13:45:15, CreatedById=005410000028GkSAAU, LastModifiedDate=2017-02-23 13:45:15, LastModifiedById=005410000028GkSAAU, SystemModstamp=2017-02-23 13:45:15, LastViewedDate=null, LastReferencedDate=null, Contact__c=0031100001G0HqbAAF, Total_Cost__c=200.00, Order_Status__c=New}
+05:45:14.86 (7917607565)|USER_DEBUG|[23]|DEBUG|setBookOrderId***{}
+05:45:14.86 (7920400259)|USER_DEBUG|[40]|DEBUG|mapBOLineItem***0
+05:45:14.86 (7924797067)|USER_DEBUG|[64]|DEBUG|lstBooks***()
+05:45:14.86 (7927597165)|USER_DEBUG|[76]|DEBUG|mapCount***{}
+05:45:14.86 (7927696151)|USER_DEBUG|[84]|DEBUG|ReqAccId***{}
+05:45:14.86 (7929790301)|USER_DEBUG|[105]|DEBUG|FinalBookcount***null
+05:45:14.86 (7929838153)|USER_DEBUG|[106]|DEBUG|lstFinalPrdUpdate***()
+05:45:14.86 (7933298013)|CODE_UNIT_FINISHED|BookOrderTrigger on Book_Order trigger event BeforeUpdate for [a001100000DompX]
+05:45:14.86 (8010857834)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store75
+05:45:14.86 (8010988145)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store74
+05:45:14.86 (8011104744)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store75
+05:45:14.86 (8011219968)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store74
+05:45:14.86 (8011332420)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store75
+05:45:14.86 (8011443973)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store74
+05:45:14.86 (8011553395)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store75
+05:45:14.86 (8011662711)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store74
+05:45:14.86 (8011765500)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store75
+05:45:14.86 (8011875066)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store74
+05:45:14.86 (8011976210)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store75
+05:45:14.86 (8012077185)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store74
+05:45:14.86 (8012177560)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store75
+05:45:14.86 (8012276072)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store74
+05:45:14.86 (8012373656)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store75
+05:45:14.86 (8012483343)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store74
+05:45:14.86 (8012584973)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store75
+05:45:14.86 (8012683690)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store74
+05:45:14.86 (8012791138)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8012895369)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8013000897)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8013106352)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8013210191)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8013322082)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8013425562)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8013525593)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8013630584)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8013738344)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8013832510)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store75
+05:45:14.86 (8013940070)|USER_DEBUG|[124]|DEBUG|Anydatatype_msg*** Book Seller Book Seller Store73
+05:45:14.86 (8040397274)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|BookOrderTrigger on Book_Order trigger event BeforeUpdate for [a001100000DompX]
+05:45:14.86 (8040800603)|USER_DEBUG|[19]|DEBUG|eachBO***Book_Order__c:{Id=a001100000DompXAAR, IsDeleted=false, Name=order_2, CreatedDate=2017-02-23 13:45:15, CreatedById=005410000028GkSAAU, LastModifiedDate=2017-02-23 13:45:15, LastModifiedById=005410000028GkSAAU, SystemModstamp=2017-02-23 13:45:15, LastViewedDate=null, LastReferencedDate=null, Contact__c=0031100001G0HqbAAF, Total_Cost__c=200.00, Order_Status__c=Ordered}
+05:45:14.86 (8040983527)|USER_DEBUG|[23]|DEBUG|setBookOrderId***{a001100000DompXAAR}
+05:45:14.86 (8055497263)|USER_DEBUG|[40]|DEBUG|mapBOLineItem***10
+05:45:15.93 (8093729557)|USER_DEBUG|[64]|DEBUG|lstBooks***()
+05:45:15.93 (8097296376)|USER_DEBUG|[76]|DEBUG|mapCount***{}
+05:45:15.93 (8097363623)|USER_DEBUG|[84]|DEBUG|ReqAccId***{}
+05:45:15.93 (8099574285)|USER_DEBUG|[105]|DEBUG|FinalBookcount***null
+05:45:15.93 (8099604088)|USER_DEBUG|[106]|DEBUG|lstFinalPrdUpdate***()
+05:45:15.93 (8124300544)|CODE_UNIT_FINISHED|BookOrderTrigger on Book_Order trigger event BeforeUpdate for [a001100000DompX]
+05:45:15.93 (8149780976)|EXCEPTION_THROWN|[138]|System.AssertException: Assertion Failed: Expected: Backordered, Actual: Shipped
+05:45:15.93 (8150018173)|FATAL_ERROR|System.AssertException: Assertion Failed: Expected: Backordered, Actual: Shipped
+
+Class.BookListControllerTest.TestMethodOne: line 138, column 1
+05:45:15.93 (8150028612)|FATAL_ERROR|System.AssertException: Assertion Failed: Expected: Backordered, Actual: Shipped
+
+Class.BookListControllerTest.TestMethodOne: line 138, column 1
+05:45:15.93 (8150038755)|CODE_UNIT_FINISHED|BookListControllerTest.TestMethodOne
+05:45:15.93 (8151486624)|EXECUTION_FINISHED

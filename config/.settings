@@ -1,0 +1,24 @@
+{
+    "projectName": "Dev2Test",
+    "username": "candidate@829258advdev.com.devbox",
+    "id": "abaec520-f901-11e6-a145-b5eee7026d61",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://cs18.salesforce.com",
+    "workspace": "/Users/krishnabogavelli/Documents",
+    "subscription": [
+        "ActionLinkGroupTemplate",
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "CustomLabels",
+        "CustomMetadata",
+        "CustomObject",
+        "HomePageLayout",
+        "Layout",
+        "StaticResource",
+        "Workflow"
+    ]
+}

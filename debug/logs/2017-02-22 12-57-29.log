@@ -1,0 +1,286 @@
+39.0 APEX_CODE,DEBUG;APEX_PROFILING,NONE;CALLOUT,NONE;DB,NONE;SYSTEM,NONE;VALIDATION,NONE;VISUALFORCE,NONE;WAVE,NONE;WORKFLOW,NONE
+09:57:16.1 (1245709)|USER_INFO|[EXTERNAL]|005410000028GkS|candidate@829258advdev.com.devbox|Pacific Standard Time|GMT-08:00
+09:57:16.1 (1304413)|EXECUTION_STARTED
+09:57:16.1 (1310472)|CODE_UNIT_STARTED|[EXTERNAL]|01p11000000FyWX|BookOrderTest.caseTestData
+09:57:17.731 (1731707908)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+09:57:17.731 (2197561143)|CODE_UNIT_FINISHED|Workflow:Product2
+09:57:17.731 (2440282426)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+09:57:17.731 (2598199265)|CODE_UNIT_FINISHED|Workflow:Product2
+09:57:19.64 (3064623552)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+09:57:19.64 (3351915126)|CODE_UNIT_FINISHED|Workflow:Product2
+09:57:19.64 (4010418162)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+09:57:20.421 (4421091180)|CODE_UNIT_FINISHED|Workflow:Product2
+09:57:20.421 (4984219666)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+09:57:20.421 (5376485642)|CODE_UNIT_FINISHED|Workflow:Product2
+09:57:20.421 (5420647469)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI})
+09:57:20.421 (5420795462)|USER_DEBUG|[85]|DEBUG|Name = Book_3Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store104
+09:57:20.421 (5420979060)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPKAAY, Family=Paperback, Name=Book_30, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI})
+09:57:21.421 (5421030045)|USER_DEBUG|[85]|DEBUG|Name = Book_30Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store105
+09:57:21.421 (5421243970)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPKAAY, Family=Paperback, Name=Book_30, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPLAAY, Family=Paperback, Name=Book_31, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI})
+09:57:21.421 (5421286681)|USER_DEBUG|[85]|DEBUG|Name = Book_31Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store105
+09:57:21.421 (5421505004)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPKAAY, Family=Paperback, Name=Book_30, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPLAAY, Family=Paperback, Name=Book_31, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPMAAY, Family=Paperback, Name=Book_32, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI})
+09:57:21.421 (5421547924)|USER_DEBUG|[85]|DEBUG|Name = Book_32Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store105
+09:57:21.421 (5421787909)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPKAAY, Family=Paperback, Name=Book_30, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPLAAY, Family=Paperback, Name=Book_31, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPMAAY, Family=Paperback, Name=Book_32, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPNAAY, Family=Paperback, Name=Book_33, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI})
+09:57:21.421 (5421829519)|USER_DEBUG|[85]|DEBUG|Name = Book_33Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store105
+09:57:21.421 (5422091987)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPKAAY, Family=Paperback, Name=Book_30, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPLAAY, Family=Paperback, Name=Book_31, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPMAAY, Family=Paperback, Name=Book_32, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPNAAY, Family=Paperback, Name=Book_33, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPOAAY, Family=Paperback, Name=Book_34, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI})
+09:57:21.421 (5422139537)|USER_DEBUG|[85]|DEBUG|Name = Book_34Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store105
+09:57:21.421 (5422429368)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPKAAY, Family=Paperback, Name=Book_30, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPLAAY, Family=Paperback, Name=Book_31, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPMAAY, Family=Paperback, Name=Book_32, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPNAAY, Family=Paperback, Name=Book_33, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPOAAY, Family=Paperback, Name=Book_34, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPPAAY, Family=Paperback, Name=Book_35, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI})
+09:57:21.421 (5422472204)|USER_DEBUG|[85]|DEBUG|Name = Book_35Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store105
+09:57:21.421 (5422786067)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPKAAY, Family=Paperback, Name=Book_30, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPLAAY, Family=Paperback, Name=Book_31, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPMAAY, Family=Paperback, Name=Book_32, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPNAAY, Family=Paperback, Name=Book_33, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPOAAY, Family=Paperback, Name=Book_34, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPPAAY, Family=Paperback, Name=Book_35, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPQAAY, Family=Paperback, Name=Book_36, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI})
+09:57:21.421 (5422830648)|USER_DEBUG|[85]|DEBUG|Name = Book_36Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store105
+09:57:21.421 (5423172500)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPKAAY, Family=Paperback, Name=Book_30, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPLAAY, Family=Paperback, Name=Book_31, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPMAAY, Family=Paperback, Name=Book_32, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPNAAY, Family=Paperback, Name=Book_33, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPOAAY, Family=Paperback, Name=Book_34, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPPAAY, Family=Paperback, Name=Book_35, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPQAAY, Family=Paperback, Name=Book_36, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPRAAY, Family=Paperback, Name=Book_37, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI})
+09:57:21.421 (5423223124)|USER_DEBUG|[85]|DEBUG|Name = Book_37Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store105
+09:57:21.421 (5423587072)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPKAAY, Family=Paperback, Name=Book_30, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPLAAY, Family=Paperback, Name=Book_31, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPMAAY, Family=Paperback, Name=Book_32, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPNAAY, Family=Paperback, Name=Book_33, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPOAAY, Family=Paperback, Name=Book_34, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPPAAY, Family=Paperback, Name=Book_35, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPQAAY, Family=Paperback, Name=Book_36, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPRAAY, Family=Paperback, Name=Book_37, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPSAAY, Family=Paperback, Name=Book_38, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI})
+09:57:21.421 (5423632451)|USER_DEBUG|[85]|DEBUG|Name = Book_38Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store105
+09:57:21.421 (5423994132)|USER_DEBUG|[84]|DEBUG|(Product2:{Id=01t11000006gsOtAAI, Family=Paperback, Name=Book_3, Current_Price__c=20.00, Account__c=0011100001LcrsWAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPKAAY, Family=Paperback, Name=Book_30, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPLAAY, Family=Paperback, Name=Book_31, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPMAAY, Family=Paperback, Name=Book_32, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPNAAY, Family=Paperback, Name=Book_33, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPOAAY, Family=Paperback, Name=Book_34, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPPAAY, Family=Paperback, Name=Book_35, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPQAAY, Family=Paperback, Name=Book_36, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPRAAY, Family=Paperback, Name=Book_37, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, Product2:{Id=01t11000006gsPSAAY, Family=Paperback, Name=Book_38, Current_Price__c=20.00, Account__c=0011100001LcrsXAAR, Collection__c=01t11000006gsOqAAI}, ...)
+09:57:21.421 (5424038607)|USER_DEBUG|[85]|DEBUG|Name = Book_39Family = Paperback === 01t11000006gsOqAAIAccount Name = Book Seller Store105
+09:57:21.421 (5476028875)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+09:57:21.421 (5483532907)|CODE_UNIT_FINISHED|Workflow:Product2
+09:57:21.421 (5608019534)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Contact
+09:57:21.421 (5714091809)|CODE_UNIT_FINISHED|Workflow:Contact
+09:57:21.421 (5714266069)|CODE_UNIT_FINISHED|BookOrderTest.caseTestData
+09:57:21.421 (5716373195)|EXECUTION_FINISHED
+09:57:21.730 (5730310608)|USER_INFO|[EXTERNAL]|005410000028GkS|candidate@829258advdev.com.devbox|Pacific Standard Time|GMT-08:00
+09:57:21.730 (5730325333)|EXECUTION_STARTED
+09:57:21.730 (5730328737)|CODE_UNIT_STARTED|[EXTERNAL]|01p11000000FyWX|BookOrderTest.TestMethodTwo_InvetoryQuantity
+09:57:21.730 (5787503017)|USER_DEBUG|[236]|DEBUG|getBooks202
+09:57:21.730 (5792210328)|USER_DEBUG|[248]|DEBUG|Products List(Product2:{Account__c=0011100001LcrsWAAR, Id=01t11000006gsPnAAI, Name=Book_59, Family=Hardcover, Current_Price__c=20.00}, Product2:{Account__c=0011100001LcrsWAAR, Id=01t11000006gsOqAAI, Name=Book_0, Family=Collection, Current_Price__c=20.00}, Product2:{Account__c=0011100001LcrsWAAR, Id=01t11000006gsPlAAI, Name=Book_57, Family=Hardcover, Current_Price__c=20.00}, Product2:{Account__c=0011100001LcrsWAAR, Id=01t11000006gsPkAAI, Name=Book_56, Family=Hardcover, Current_Price__c=20.00}, Product2:{Account__c=0011100001LcrsWAAR, Id=01t11000006gsPjAAI, Name=Book_55, Family=Hardcover, Current_Price__c=20.00}, Product2:{Account__c=0011100001LcrsWAAR, Id=01t11000006gsPiAAI, Name=Book_54, Family=Hardcover, Current_Price__c=20.00}, Product2:{Account__c=0011100001LcrsWAAR, Id=01t11000006gsPhAAI, Name=Book_53, Family=Hardcover, Current_Price__c=20.00}, Product2:{Account__c=0011100001LcrsWAAR, Id=01t11000006gsPgAAI, Name=Book_52, Family=Hardcover, Current_Price__c=20.00}, Product2:{Account__c=0011100001LcrsWAAR, Id=01t11000006gsPfAAI, Name=Book_51, Family=Hardcover, Current_Price__c=20.00}, Product2:{Account__c=0011100001LcrsWAAR, Id=01t11000006gsPeAAI, Name=Book_50, Family=Hardcover, Current_Price__c=20.00}, ...)
+09:57:21.730 (5982714923)|USER_DEBUG|[280]|DEBUG|;Book Name Book_59;Book Seller Name Warehouse1 ; 100;Seller Name Book_59;Hardcover
+09:57:21.730 (5982921065)|USER_DEBUG|[280]|DEBUG|;Book Name Book_0;Book Seller Name Warehouse0 ; 100;Seller Name Book_0;Collection
+09:57:21.730 (5983136773)|USER_DEBUG|[280]|DEBUG|;Book Name Book_57;Book Seller Name Warehouse1 ; 100;Seller Name Book_57;Hardcover
+09:57:21.730 (5983318098)|USER_DEBUG|[280]|DEBUG|;Book Name Book_56;Book Seller Name Warehouse1 ; 100;Seller Name Book_56;Hardcover
+09:57:21.730 (5983488108)|USER_DEBUG|[280]|DEBUG|;Book Name Book_55;Book Seller Name Warehouse1 ; 100;Seller Name Book_55;Hardcover
+09:57:21.730 (5983656116)|USER_DEBUG|[280]|DEBUG|;Book Name Book_54;Book Seller Name Warehouse1 ; 100;Seller Name Book_54;Hardcover
+09:57:21.730 (5983863457)|USER_DEBUG|[280]|DEBUG|;Book Name Book_53;Book Seller Name Warehouse1 ; 100;Seller Name Book_53;Hardcover
+09:57:21.730 (5984031213)|USER_DEBUG|[280]|DEBUG|;Book Name Book_52;Book Seller Name Warehouse1 ; 100;Seller Name Book_52;Hardcover
+09:57:21.730 (5984207822)|USER_DEBUG|[280]|DEBUG|;Book Name Book_51;Book Seller Name Warehouse1 ; 100;Seller Name Book_51;Hardcover
+09:57:21.730 (5984427614)|USER_DEBUG|[280]|DEBUG|;Book Name Book_50;Book Seller Name Warehouse1 ; 100;Seller Name Book_50;Hardcover
+09:57:21.730 (5984598783)|USER_DEBUG|[280]|DEBUG|;Book Name Book_49;Book Seller Name Warehouse1 ; 100;Seller Name Book_49;Hardcover
+09:57:21.730 (5984764796)|USER_DEBUG|[280]|DEBUG|;Book Name Book_48;Book Seller Name Warehouse1 ; 100;Seller Name Book_48;Hardcover
+09:57:21.730 (5984931408)|USER_DEBUG|[280]|DEBUG|;Book Name Book_47;Book Seller Name Warehouse1 ; 100;Seller Name Book_47;Hardcover
+09:57:21.730 (5985133930)|USER_DEBUG|[280]|DEBUG|;Book Name Book_46;Book Seller Name Warehouse1 ; 100;Seller Name Book_46;Hardcover
+09:57:21.730 (5985306880)|USER_DEBUG|[280]|DEBUG|;Book Name Book_45;Book Seller Name Warehouse1 ; 100;Seller Name Book_45;Hardcover
+09:57:21.730 (5985472611)|USER_DEBUG|[280]|DEBUG|;Book Name Book_44;Book Seller Name Warehouse1 ; 100;Seller Name Book_44;Hardcover
+09:57:21.730 (5985670618)|USER_DEBUG|[280]|DEBUG|;Book Name Book_43;Book Seller Name Warehouse1 ; 100;Seller Name Book_43;Hardcover
+09:57:21.730 (5985840364)|USER_DEBUG|[280]|DEBUG|;Book Name Book_42;Book Seller Name Warehouse1 ; 100;Seller Name Book_42;Hardcover
+09:57:21.730 (5986006413)|USER_DEBUG|[280]|DEBUG|;Book Name Book_41;Book Seller Name Warehouse1 ; 100;Seller Name Book_41;Hardcover
+09:57:21.730 (5986178258)|USER_DEBUG|[280]|DEBUG|;Book Name Book_40;Book Seller Name Warehouse1 ; 100;Seller Name Book_40;Hardcover
+09:57:21.730 (5986380886)|USER_DEBUG|[280]|DEBUG|;Book Name Book_29;Book Seller Name Warehouse0 ; 100;Seller Name Book_29;Paperback
+09:57:21.730 (5986548726)|USER_DEBUG|[280]|DEBUG|;Book Name Book_28;Book Seller Name Warehouse0 ; 100;Seller Name Book_28;Paperback
+09:57:21.730 (5986714900)|USER_DEBUG|[280]|DEBUG|;Book Name Book_27;Book Seller Name Warehouse0 ; 100;Seller Name Book_27;Paperback
+09:57:21.730 (5986879891)|USER_DEBUG|[280]|DEBUG|;Book Name Book_26;Book Seller Name Warehouse0 ; 100;Seller Name Book_26;Paperback
+09:57:21.730 (5987075862)|USER_DEBUG|[280]|DEBUG|;Book Name Book_25;Book Seller Name Warehouse0 ; 100;Seller Name Book_25;Paperback
+09:57:21.730 (5987251375)|USER_DEBUG|[280]|DEBUG|;Book Name Book_24;Book Seller Name Warehouse0 ; 100;Seller Name Book_24;Paperback
+09:57:21.730 (5987418074)|USER_DEBUG|[280]|DEBUG|;Book Name Book_23;Book Seller Name Warehouse0 ; 100;Seller Name Book_23;Paperback
+09:57:21.730 (5987624436)|USER_DEBUG|[280]|DEBUG|;Book Name Book_22;Book Seller Name Warehouse0 ; 100;Seller Name Book_22;Paperback
+09:57:21.730 (5987806152)|USER_DEBUG|[280]|DEBUG|;Book Name Book_21;Book Seller Name Warehouse0 ; 100;Seller Name Book_21;Paperback
+09:57:21.730 (5987972799)|USER_DEBUG|[280]|DEBUG|;Book Name Book_20;Book Seller Name Warehouse0 ; 100;Seller Name Book_20;Paperback
+09:57:21.730 (5988139782)|USER_DEBUG|[280]|DEBUG|;Book Name Book_19;Book Seller Name Warehouse0 ; 100;Seller Name Book_19;Paperback
+09:57:21.730 (5988347931)|USER_DEBUG|[280]|DEBUG|;Book Name Book_18;Book Seller Name Warehouse0 ; 100;Seller Name Book_18;Paperback
+09:57:21.730 (5988515347)|USER_DEBUG|[280]|DEBUG|;Book Name Book_17;Book Seller Name Warehouse0 ; 100;Seller Name Book_17;Paperback
+09:57:21.730 (5988682532)|USER_DEBUG|[280]|DEBUG|;Book Name Book_16;Book Seller Name Warehouse0 ; 100;Seller Name Book_16;Paperback
+09:57:21.730 (5988848657)|USER_DEBUG|[280]|DEBUG|;Book Name Book_15;Book Seller Name Warehouse0 ; 100;Seller Name Book_15;Paperback
+09:57:21.730 (5989042552)|USER_DEBUG|[280]|DEBUG|;Book Name Book_14;Book Seller Name Warehouse0 ; 100;Seller Name Book_14;Paperback
+09:57:21.730 (5989216448)|USER_DEBUG|[280]|DEBUG|;Book Name Book_13;Book Seller Name Warehouse0 ; 100;Seller Name Book_13;Paperback
+09:57:21.730 (5989383792)|USER_DEBUG|[280]|DEBUG|;Book Name Book_12;Book Seller Name Warehouse0 ; 100;Seller Name Book_12;Paperback
+09:57:21.730 (5989583526)|USER_DEBUG|[280]|DEBUG|;Book Name Book_11;Book Seller Name Warehouse0 ; 100;Seller Name Book_11;Paperback
+09:57:21.730 (5989749577)|USER_DEBUG|[280]|DEBUG|;Book Name Book_10;Book Seller Name Warehouse0 ; 100;Seller Name Book_10;Paperback
+09:57:21.730 (5989916223)|USER_DEBUG|[280]|DEBUG|;Book Name Book_9;Book Seller Name Warehouse0 ; 100;Seller Name Book_9;Paperback
+09:57:21.730 (5990082666)|USER_DEBUG|[280]|DEBUG|;Book Name Book_8;Book Seller Name Warehouse0 ; 100;Seller Name Book_8;Paperback
+09:57:21.730 (5990279816)|USER_DEBUG|[280]|DEBUG|;Book Name Book_7;Book Seller Name Warehouse0 ; 100;Seller Name Book_7;Paperback
+09:57:21.730 (5990446386)|USER_DEBUG|[280]|DEBUG|;Book Name Book_6;Book Seller Name Warehouse0 ; 100;Seller Name Book_6;Paperback
+09:57:21.730 (5990612471)|USER_DEBUG|[280]|DEBUG|;Book Name Book_5;Book Seller Name Warehouse0 ; 100;Seller Name Book_5;Paperback
+09:57:21.730 (5990811399)|USER_DEBUG|[280]|DEBUG|;Book Name Book_4;Book Seller Name Warehouse0 ; 100;Seller Name Book_4;Paperback
+09:57:21.730 (5990989485)|USER_DEBUG|[280]|DEBUG|;Book Name Book_3;Book Seller Name Warehouse0 ; 100;Seller Name Book_3;Paperback
+09:57:21.730 (5991160217)|USER_DEBUG|[280]|DEBUG|;Book Name Book_2;Book Seller Name Warehouse0 ; 100;Seller Name Book_2;Paperback
+09:57:21.730 (5991329308)|USER_DEBUG|[280]|DEBUG|;Book Name Book_1;Book Seller Name Warehouse0 ; 100;Seller Name Book_1;Paperback
+09:57:21.730 (5991525648)|USER_DEBUG|[280]|DEBUG|;Book Name Book_58;Book Seller Name Warehouse1 ; 100;Seller Name Book_58;Hardcover
+09:57:21.730 (6230449534)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DbMo7]
+09:57:21.730 (6280166465)|USER_DEBUG|[84]|DEBUG|List of Book Names{}
+09:57:21.730 (6280254514)|USER_DEBUG|[102]|DEBUG|List of Wharehouse accounts()
+09:57:21.730 (6280399689)|USER_DEBUG|[166]|DEBUG|Final update to Product{}
+09:57:21.730 (6282020213)|CODE_UNIT_FINISHED|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DbMo7]
+09:57:21.730 (6303119424)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJgzAAE, Name=Book_59, Quantity__c=1}
+09:57:21.730 (6303228255)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJh0AAE, Name=Book_0, Quantity__c=1}
+09:57:21.730 (6303353700)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJh1AAE, Name=Book_57, Quantity__c=1}
+09:57:21.730 (6303507736)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJh2AAE, Name=Book_56, Quantity__c=1}
+09:57:21.730 (6303610415)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJh3AAE, Name=Book_55, Quantity__c=1}
+09:57:21.730 (6303711226)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJh4AAE, Name=Book_54, Quantity__c=1}
+09:57:21.730 (6303805166)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJh5AAE, Name=Book_53, Quantity__c=1}
+09:57:21.730 (6303898946)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJh6AAE, Name=Book_52, Quantity__c=1}
+09:57:21.730 (6303991941)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJh7AAE, Name=Book_51, Quantity__c=1}
+09:57:21.730 (6304111959)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJh8AAE, Name=Book_50, Quantity__c=1}
+09:57:21.730 (6304237405)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJh9AAE, Name=Book_49, Quantity__c=1}
+09:57:21.730 (6304335794)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhAAAU, Name=Book_48, Quantity__c=1}
+09:57:21.730 (6304430586)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhBAAU, Name=Book_47, Quantity__c=1}
+09:57:21.730 (6304524719)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhCAAU, Name=Book_46, Quantity__c=1}
+09:57:21.730 (6304617937)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhDAAU, Name=Book_45, Quantity__c=1}
+09:57:21.730 (6304711682)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhEAAU, Name=Book_44, Quantity__c=1}
+09:57:21.730 (6304805861)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhFAAU, Name=Book_43, Quantity__c=1}
+09:57:21.730 (6304898896)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhGAAU, Name=Book_42, Quantity__c=1}
+09:57:21.730 (6305008319)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhHAAU, Name=Book_41, Quantity__c=1}
+09:57:21.730 (6305112406)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhIAAU, Name=Book_40, Quantity__c=1}
+09:57:21.730 (6305223042)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhJAAU, Name=Book_29, Quantity__c=1}
+09:57:21.730 (6305326107)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhKAAU, Name=Book_28, Quantity__c=1}
+09:57:21.730 (6305439576)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhLAAU, Name=Book_27, Quantity__c=1}
+09:57:21.730 (6305535418)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhMAAU, Name=Book_26, Quantity__c=1}
+09:57:21.730 (6305628920)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhNAAU, Name=Book_25, Quantity__c=1}
+09:57:21.730 (6305727312)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhOAAU, Name=Book_24, Quantity__c=1}
+09:57:21.730 (6305852555)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhPAAU, Name=Book_23, Quantity__c=1}
+09:57:21.730 (6305949363)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhQAAU, Name=Book_22, Quantity__c=1}
+09:57:21.730 (6306042081)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhRAAU, Name=Book_21, Quantity__c=1}
+09:57:21.730 (6306143047)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhSAAU, Name=Book_20, Quantity__c=1}
+09:57:21.730 (6306235982)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhTAAU, Name=Book_19, Quantity__c=1}
+09:57:21.730 (6306343242)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhUAAU, Name=Book_18, Quantity__c=1}
+09:57:21.730 (6306470034)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhVAAU, Name=Book_17, Quantity__c=1}
+09:57:21.730 (6306565766)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhWAAU, Name=Book_16, Quantity__c=1}
+09:57:21.730 (6306659341)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhXAAU, Name=Book_15, Quantity__c=1}
+09:57:21.730 (6306756283)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhYAAU, Name=Book_14, Quantity__c=1}
+09:57:21.730 (6306849305)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhZAAU, Name=Book_13, Quantity__c=1}
+09:57:21.730 (6306966661)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhaAAE, Name=Book_12, Quantity__c=1}
+09:57:21.730 (6307113615)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhbAAE, Name=Book_11, Quantity__c=1}
+09:57:21.730 (6307213563)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhcAAE, Name=Book_10, Quantity__c=1}
+09:57:21.730 (6307311431)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhdAAE, Name=Book_9, Quantity__c=1}
+09:57:21.730 (6307418688)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJheAAE, Name=Book_8, Quantity__c=1}
+09:57:21.730 (6307526757)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhfAAE, Name=Book_7, Quantity__c=1}
+09:57:21.730 (6307620719)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhgAAE, Name=Book_6, Quantity__c=1}
+09:57:21.730 (6307713376)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhhAAE, Name=Book_5, Quantity__c=1}
+09:57:21.730 (6307806159)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhiAAE, Name=Book_4, Quantity__c=1}
+09:57:21.730 (6307899108)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhjAAE, Name=Book_3, Quantity__c=1}
+09:57:21.730 (6307991748)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhkAAE, Name=Book_2, Quantity__c=1}
+09:57:21.730 (6308089677)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhlAAE, Name=Book_1, Quantity__c=1}
+09:57:21.730 (6308185237)|USER_DEBUG|[288]|DEBUG|Line Item RecLine_Item__c:{Id=a011100000emJhmAAE, Name=Book_58, Quantity__c=1}
+09:57:21.730 (6318045698)|USER_DEBUG|[297]|DEBUG|Test 1**Book_Order__c:{Id=a001100000DbMo7AAF, Order_Status__c=Ordered}
+09:57:21.730 (6328086131)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DbMo7]
+09:57:21.730 (6390058018)|USER_DEBUG|[84]|DEBUG|List of Book Names{a001100000DbMo7AAF={Book_3=1, Book_30=1, Book_31=1, Book_32=1, Book_33=1, Book_34=1, Book_35=1, Book_36=1, Book_37=1, Book_38=1, ...}}
+09:57:21.730 (6523736983)|USER_DEBUG|[102]|DEBUG|List of Wharehouse accounts(Account:{Id=0011100001LcrqSAAR, Name=Warehouse0}, Account:{Id=0011100001LcrqTAAR, Name=Warehouse1}, Account:{Id=0011100001LcrqcAAB, Name=Warehouse10}, Account:{Id=0011100001LcrqdAAB, Name=Warehouse11}, Account:{Id=0011100001LcrqeAAB, Name=Warehouse12}, Account:{Id=0011100001LcrqfAAB, Name=Warehouse13}, Account:{Id=0011100001LcrqgAAB, Name=Warehouse14}, Account:{Id=0011100001LcrqhAAB, Name=Warehouse15}, Account:{Id=0011100001LcrqiAAB, Name=Warehouse16}, Account:{Id=0011100001LcrqjAAB, Name=Warehouse17}, ...)
+09:57:21.730 (6558686424)|USER_DEBUG|[166]|DEBUG|Final update to Product{01t11000006gsTiAAI=Product2:{Account__c=0011100001LcrqUAAR, Id=01t11000006gsTiAAI, Name=Book_1, Inventory__c=100}, 01t11000006gsTkAAI=Product2:{Account__c=0011100001LcrqUAAR, Id=01t11000006gsTkAAI, Name=Book_2, Inventory__c=100}, 01t11000006gsTmAAI=Product2:{Account__c=0011100001LcrqUAAR, Id=01t11000006gsTmAAI, Name=Book_3, Inventory__c=99}, 01t11000006gsToAAI=Product2:{Account__c=0011100001LcrqUAAR, Id=01t11000006gsToAAI, Name=Book_4, Inventory__c=100}, 01t11000006gsTqAAI=Product2:{Account__c=0011100001LcrqUAAR, Id=01t11000006gsTqAAI, Name=Book_5, Inventory__c=100}, 01t11000006gsTsAAI=Product2:{Account__c=0011100001LcrqUAAR, Id=01t11000006gsTsAAI, Name=Book_6, Inventory__c=100}, 01t11000006gsTuAAI=Product2:{Account__c=0011100001LcrqUAAR, Id=01t11000006gsTuAAI, Name=Book_7, Inventory__c=100}, 01t11000006gsTwAAI=Product2:{Account__c=0011100001LcrqUAAR, Id=01t11000006gsTwAAI, Name=Book_8, Inventory__c=100}, 01t11000006gsTyAAI=Product2:{Account__c=0011100001LcrqUAAR, Id=01t11000006gsTyAAI, Name=Book_9, Inventory__c=100}, 01t11000006gsU0AAI=Product2:{Account__c=0011100001LcrqUAAR, Id=01t11000006gsU0AAI, Name=Book_10, Inventory__c=100}, ...}
+09:57:22.871 (6871251332)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+09:57:22.871 (6892529141)|CODE_UNIT_FINISHED|Workflow:Product2
+09:57:22.871 (6894694494)|CODE_UNIT_FINISHED|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DbMo7]
+09:57:22.871 (6907830165)|USER_DEBUG|[300]|DEBUG|Test 2**Book_Order__c:{Id=a001100000DbMo7AAF, Order_Status__c=Ordered}
+09:57:22.871 (7009085641)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_0 ; Inventory ; inv 100
+09:57:22.871 (7009279618)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_0 ; Inventory ; inv 100
+09:57:22.871 (7009405880)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_1 ; Inventory ; inv 100
+09:57:22.871 (7009549423)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_1 ; Inventory ; inv 100
+09:57:22.871 (7009688806)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_10 ; Inventory ; inv 100
+09:57:22.871 (7009818835)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_10 ; Inventory ; inv 100
+09:57:22.871 (7009951446)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_11 ; Inventory ; inv 100
+09:57:22.871 (7010071085)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_11 ; Inventory ; inv 100
+09:57:22.871 (7010203260)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_12 ; Inventory ; inv 100
+09:57:22.871 (7010404283)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_12 ; Inventory ; inv 100
+09:57:22.871 (7010625581)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_13 ; Inventory ; inv 100
+09:57:22.871 (7010860442)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_13 ; Inventory ; inv 100
+09:57:22.871 (7011046670)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_14 ; Inventory ; inv 100
+09:57:22.871 (7011185662)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_14 ; Inventory ; inv 100
+09:57:22.871 (7011340211)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_15 ; Inventory ; inv 100
+09:57:22.871 (7011455173)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_15 ; Inventory ; inv 100
+09:57:22.871 (7011568301)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_16 ; Inventory ; inv 100
+09:57:22.871 (7011680262)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_16 ; Inventory ; inv 100
+09:57:22.871 (7011808045)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_17 ; Inventory ; inv 100
+09:57:22.871 (7011988213)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_17 ; Inventory ; inv 100
+09:57:22.871 (7012170389)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_18 ; Inventory ; inv 100
+09:57:22.871 (7012309724)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_18 ; Inventory ; inv 100
+09:57:22.871 (7012425967)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_19 ; Inventory ; inv 100
+09:57:22.871 (7012539480)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_19 ; Inventory ; inv 100
+09:57:22.871 (7012682104)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_2 ; Inventory ; inv 100
+09:57:22.871 (7012821796)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_2 ; Inventory ; inv 100
+09:57:22.871 (7012992718)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_20 ; Inventory ; inv 100
+09:57:22.871 (7013112549)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_20 ; Inventory ; inv 100
+09:57:22.871 (7013226589)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_21 ; Inventory ; inv 100
+09:57:22.871 (7013346819)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_21 ; Inventory ; inv 100
+09:57:22.871 (7013473439)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_22 ; Inventory ; inv 100
+09:57:22.871 (7013612979)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_22 ; Inventory ; inv 100
+09:57:22.871 (7013726162)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_23 ; Inventory ; inv 100
+09:57:22.871 (7013871170)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_23 ; Inventory ; inv 100
+09:57:22.871 (7013989314)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_24 ; Inventory ; inv 100
+09:57:22.871 (7014109253)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_24 ; Inventory ; inv 100
+09:57:22.871 (7014246757)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_25 ; Inventory ; inv 100
+09:57:22.871 (7014367617)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_25 ; Inventory ; inv 100
+09:57:22.871 (7014501547)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_26 ; Inventory ; inv 100
+09:57:22.871 (7014618564)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_26 ; Inventory ; inv 100
+09:57:22.871 (7014743023)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_27 ; Inventory ; inv 100
+09:57:22.871 (7014863187)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_27 ; Inventory ; inv 100
+09:57:22.871 (7014974984)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_28 ; Inventory ; inv 100
+09:57:22.871 (7015112978)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_28 ; Inventory ; inv 100
+09:57:22.871 (7015227844)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_29 ; Inventory ; inv 100
+09:57:22.871 (7015365491)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_29 ; Inventory ; inv 100
+09:57:22.871 (7015478592)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_3 ; Inventory ; inv 99
+09:57:22.871 (7015663861)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_3 ; Inventory ; inv 100
+09:57:22.871 (7015813850)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_4 ; Inventory ; inv 100
+09:57:22.871 (7015929488)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_4 ; Inventory ; inv 100
+09:57:22.871 (7016058263)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_40 ; Inventory ; inv 100
+09:57:22.871 (7016189453)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_40 ; Inventory ; inv 100
+09:57:22.871 (7016306190)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_41 ; Inventory ; inv 100
+09:57:22.871 (7016427643)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_41 ; Inventory ; inv 100
+09:57:22.871 (7016541209)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_42 ; Inventory ; inv 100
+09:57:22.871 (7016683133)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_42 ; Inventory ; inv 100
+09:57:22.871 (7016804845)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_43 ; Inventory ; inv 100
+09:57:22.871 (7016921334)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_43 ; Inventory ; inv 100
+09:57:22.871 (7017036390)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_44 ; Inventory ; inv 100
+09:57:22.871 (7017159980)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_44 ; Inventory ; inv 100
+09:57:22.871 (7017273985)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_45 ; Inventory ; inv 100
+09:57:22.871 (7017418347)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_45 ; Inventory ; inv 100
+09:57:22.871 (7017532316)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_46 ; Inventory ; inv 100
+09:57:22.871 (7017647679)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_46 ; Inventory ; inv 100
+09:57:22.871 (7017787764)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_47 ; Inventory ; inv 100
+09:57:22.871 (7017936960)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_47 ; Inventory ; inv 100
+09:57:22.871 (7018087225)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_48 ; Inventory ; inv 100
+09:57:22.871 (7018205799)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_48 ; Inventory ; inv 100
+09:57:22.871 (7018323818)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_49 ; Inventory ; inv 100
+09:57:22.871 (7018470164)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_49 ; Inventory ; inv 100
+09:57:22.871 (7018591829)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_5 ; Inventory ; inv 100
+09:57:22.871 (7018720659)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_5 ; Inventory ; inv 100
+09:57:22.871 (7018843178)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_50 ; Inventory ; inv 100
+09:57:22.871 (7018957039)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_50 ; Inventory ; inv 100
+09:57:22.871 (7019134774)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_51 ; Inventory ; inv 100
+09:57:22.871 (7019256185)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_51 ; Inventory ; inv 100
+09:57:22.871 (7019418443)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_52 ; Inventory ; inv 100
+09:57:22.871 (7019532543)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_52 ; Inventory ; inv 100
+09:57:22.871 (7019663415)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_53 ; Inventory ; inv 100
+09:57:22.871 (7019809472)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_53 ; Inventory ; inv 100
+09:57:22.871 (7020006461)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_54 ; Inventory ; inv 100
+09:57:22.871 (7020138865)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_54 ; Inventory ; inv 100
+09:57:22.871 (7020264738)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_55 ; Inventory ; inv 100
+09:57:22.871 (7020383057)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_55 ; Inventory ; inv 100
+09:57:22.871 (7020496400)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_56 ; Inventory ; inv 100
+09:57:22.871 (7020634549)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_56 ; Inventory ; inv 100
+09:57:22.871 (7020793793)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_57 ; Inventory ; inv 100
+09:57:22.871 (7020920677)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_57 ; Inventory ; inv 100
+09:57:22.871 (7021130247)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_58 ; Inventory ; inv 99
+09:57:22.871 (7021349097)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_58 ; Inventory ; inv 100
+09:57:22.871 (7021520106)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_59 ; Inventory ; inv 100
+09:57:22.871 (7021635943)|USER_DEBUG|[312]|DEBUG|Warehouse1 ; Book_59 ; Inventory ; inv 100
+09:57:22.871 (7021817012)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_6 ; Inventory ; inv 100
+09:57:22.871 (7021938789)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_6 ; Inventory ; inv 100
+09:57:22.871 (7022136745)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_7 ; Inventory ; inv 100
+09:57:22.871 (7022308931)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_7 ; Inventory ; inv 100
+09:57:22.871 (7022433049)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_8 ; Inventory ; inv 100
+09:57:22.871 (7022597807)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_8 ; Inventory ; inv 100
+09:57:22.871 (7022722300)|USER_DEBUG|[312]|DEBUG|Warehouse2 ; Book_9 ; Inventory ; inv 100
+09:57:22.871 (7022946544)|USER_DEBUG|[312]|DEBUG|Warehouse0 ; Book_9 ; Inventory ; inv 100
+09:57:22.871 (7024912922)|CODE_UNIT_FINISHED|BookOrderTest.TestMethodTwo_InvetoryQuantity
+09:57:22.871 (7026278790)|EXECUTION_FINISHED
+09:57:23.253 (7253449798)|USER_INFO|[EXTERNAL]|005410000028GkS|candidate@829258advdev.com.devbox|Pacific Standard Time|GMT-08:00
+09:57:23.253 (7253473084)|EXECUTION_STARTED
+09:57:23.253 (7253477557)|CODE_UNIT_STARTED|[EXTERNAL]|01p11000000FyWX|BookOrderTest.TestMethodTwo_InvetoryQuantityZero
+09:57:23.253 (8166735584)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+09:57:23.253 (8197549758)|CODE_UNIT_FINISHED|Workflow:Product2
+09:57:25.700 (9700761398)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+09:57:25.700 (9730628525)|CODE_UNIT_FINISHED|Workflow:Product2
+09:57:26.732 (10732940810)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+09:57:26.732 (10763851870)|CODE_UNIT_FINISHED|Workflow:Product2
+09:57:26.732 (10876849313)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DbMo8]
+09:57:26.732 (10905468757)|USER_DEBUG|[84]|DEBUG|List of Book Names{}
+09:57:26.732 (10905535094)|USER_DEBUG|[102]|DEBUG|List of Wharehouse accounts()
+09:57:26.732 (10905670255)|USER_DEBUG|[166]|DEBUG|Final update to Product{}
+09:57:26.732 (10907273761)|CODE_UNIT_FINISHED|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DbMo8]
+09:57:26.732 (11154613637)|USER_DEBUG|[211]|DEBUG|Test 1**Book_Order__c:{Id=a001100000DbMo8AAF, Order_Status__c=Ordered}
+09:57:26.732 (11164365991)|CODE_UNIT_STARTED|[EXTERNAL]|01q11000000D55H|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DbMo8]
+09:57:26.732 (11178990404)|USER_DEBUG|[84]|DEBUG|List of Book Names{a001100000DbMo8AAF={Book_31=1}}
+09:57:26.732 (11203909485)|USER_DEBUG|[102]|DEBUG|List of Wharehouse accounts(Account:{Id=0011100001LcrqSAAR, Name=Warehouse0}, Account:{Id=0011100001LcrqTAAR, Name=Warehouse1}, Account:{Id=0011100001LcrqcAAB, Name=Warehouse10}, Account:{Id=0011100001LcrqdAAB, Name=Warehouse11}, Account:{Id=0011100001LcrqeAAB, Name=Warehouse12}, Account:{Id=0011100001LcrqfAAB, Name=Warehouse13}, Account:{Id=0011100001LcrqgAAB, Name=Warehouse14}, Account:{Id=0011100001LcrqhAAB, Name=Warehouse15}, Account:{Id=0011100001LcrqiAAB, Name=Warehouse16}, Account:{Id=0011100001LcrqjAAB, Name=Warehouse17}, ...)
+09:57:26.732 (11211134703)|USER_DEBUG|[166]|DEBUG|Final update to Product{}
+09:57:26.732 (11212536844)|CODE_UNIT_FINISHED|RefactorTriiger on Book_Order trigger event BeforeUpdate for [a001100000DbMo8]
+09:57:26.732 (11222794578)|USER_DEBUG|[214]|DEBUG|Test 2**Book_Order__c:{Id=a001100000DbMo8AAF, Order_Status__c=Ordered}
+09:57:26.732 (11228337373)|CODE_UNIT_FINISHED|BookOrderTest.TestMethodTwo_InvetoryQuantityZero
+09:57:26.732 (11229875180)|EXECUTION_FINISHED
