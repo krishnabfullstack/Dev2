@@ -1,0 +1,73 @@
+
+import json
+import csv
+from pprint import pprint
+from simple_salesforce import Salesforce
+import pandas as pd
+from collections import defaultdict
+
+
+object_to_export = "Account"
+limit = 10000
+
+# Get column names
+def get_columns(results):
+    for i, record in enumerate(results['fields']):
+
+        if i == 0:
+            df = pd.DataFrame(record['name'], columns=['name'], index=[i])
+            #print(record['name'])
+        else:
+            df = pd.concat([df, pd.DataFrame(record['name'], columns=['name'], index=[i])])
+    #print(df)
+
+    return df
+
+
+sf = Salesforce(username='krishnab@gmail.com', security_token='nUzujSCenL1BW00N43otYoES',
+                   password='', organizationId='00D460000016PZD')  # optional parameter: sandbox=True
+
+
+result = sf.query("select id, name from recordType where sobjecttype='account'")
+
+# Get the column names from the above get_columns and execute the query
+description = sf.account.describe()  # UPDATE REQUIRED!!!
+
+columns = get_columns(description)
+columnlist = columns.drop_duplicates()
+cols = columnlist['name'].values.tolist()
+colsstring = ','.join(cols)
+sf_dict = sf.query_all("SELECT " + colsstring + " FROM account")  # UPDATE REQUIRED!!!
+
+# Create clean version of the salesforce dictionary
+sf_finaldf = defaultdict(list)
+
+#print('sf_finaldf defaultdict list',sf_finaldf)
+for c_name in cols:
+    sf_finaldf[c_name]
+
+dict_data = {}
+#print('cols sf_finaldf',sf_finaldf)
+
+#sf_finaldfMap = map(lambda Id: sf_finaldf)
+sObjectRecords = []
+
+# Load the keys + values into the above dictionary
+for i in sf_dict['records']:
+    #print(i.items())
+    if 'attributes' in i.keys():
+        del i['attributes']
+    sObjectEachRecords = []
+    for k, v in i.items():
+        sf_finaldf[k].append(v)
+        #print('log 4', k)
+        #print('log 5', v)
+        sObjectEachRecords.append((k, v))
+    sObjectRecords.append(sObjectEachRecords)
+    print('sObjectRecords',sObjectRecords)
+
+
+print(sf_finaldf)
+
+
+
